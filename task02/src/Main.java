@@ -22,7 +22,6 @@ public class Main {
         }
 
         Socket conn = new Socket(host, port);
-        Socket socket2 = new Socket(host, port);
         InputStream is = conn.getInputStream();
         BufferedInputStream bis = new BufferedInputStream(is);
         byte[] buffer = new byte[1024];
