@@ -26,7 +26,6 @@ public class Main {
         BufferedInputStream bis = new BufferedInputStream(is);
         byte[] buffer = new byte[1024];
         int bytesRead;
-        String oneItem = "";
         String holder = "";
         System.out.println("Reading");
         while (true) {
@@ -125,7 +124,6 @@ public class Main {
         StringBuilder holder2 = new StringBuilder();
         while (true) {
             bytesRead = bis.read(buffer);
-            if (bytesRead == -1) break; // End of stream
             String receivedData = new String(buffer, 0, bytesRead);
             holder2.append(receivedData);
             if (bytesRead < 1024) {
